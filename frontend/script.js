@@ -2,7 +2,7 @@
 // This script handles form submission, API communication, and UI updates
 
 // Configuration
-const API_BASE_URL = 'http://127.0.0.1:5000';
+const API_BASE_URL = 'https://missproject-1.onrender.com';
 
 // Example data for quick testing
 const EXAMPLE_DATA = {

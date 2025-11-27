@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>🌸 Iris Flower Classification</h1>
+            <p>Enter flower measurements to predict the iris species</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Input Form -->
+            <div class="card">
+                <h2>Flower Measurements</h2>
+                <form id="predictionForm">
+                    <div class="input-grid">
+                        <!-- Sepal Length -->
+                        <div class="input-group">
+                            <label for="sepal_length">Sepal Length (cm)</label>
+                            <input
+                                type="number"
+                                id="sepal_length"
+                                name="sepal_length"
+                                step="0.1"
+                                min="0"
+                                max="10"
+                                placeholder="e.g., 5.1"
+                                required
+                            >
+                            <small>Length of the outer petal</small>
+                        </div>
+
+                        <!-- Sepal Width -->
+                        <div class="input-group">
+                            <label for="sepal_width">Sepal Width (cm)</label>
+                            <input
+                                type="number"
+                                id="sepal_width"
+                                name="sepal_width"
+                                step="0.1"
+                                min="0"
+                                max="10"
+                                placeholder="e.g., 3.5"
+                                required
+                            >
+                            <small>Width of the outer petal</small>
+                        </div>
+
+                        <!-- Petal Length -->
+                        <div class="input-group">
+                            <label for="petal_length">Petal Length (cm)</label>
+                            <input
+                                type="number"
+                                id="petal_length"
+                                name="petal_length"
+                                step="0.1"
+                                min="0"
+                                max="10"
+                                placeholder="e.g., 1.4"
+                                required
+                            >
+                            <small>Length of the inner petal</small>
+                        </div>
+
+                        <!-- Petal Width -->
+                        <div class="input-group">
+                            <label for="petal_width">Petal Width (cm)</label>
+                            <input
+                                type="number"
+                                id="petal_width"
+                                name="petal_width"
+                                step="0.1"
+                                min="0"
+                                max="10"
+                                placeholder="e.g., 0.2"
+                                required
+                            >
+                            <small>Width of the inner petal</small>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="button-container">
+                        <button type="submit" id="predictBtn" class="predict-btn">
+                            🔮 Predict Flower Species
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Quick Fill Examples -->
+                <div class="examples">
+                    <h3>Quick Fill Examples:</h3>
+                    <div class="example-buttons">
+                        <button class="example-btn" data-example="setosa">
+                            Setosa Example
+                        </button>
+                        <button class="example-btn" data-example="versicolor">
+                            Versicolor Example
+                        </button>
+                        <button class="example-btn" data-example="virginica">
+                            Virginica Example
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="card result-card" id="resultCard" style="display: none;">
+                <h2>Prediction Result</h2>
+                <div id="resultContent">
+                    <!-- Results will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing flower measurements...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-card" id="errorCard" style="display: none;">
+                <h3>⚠️ Error</h3>
+                <div id="errorMessage"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Iris Classification using Machine Learning | Built with Python, Flask, and JavaScript</p>
+            <div class="info">
+                <h4>About the Iris Dataset:</h4>
+                <ul>
+                    <li><strong>Setosa:</strong> Small petals, easy to distinguish</li>
+                    <li><strong>Versicolor:</strong> Medium-sized petals</li>
+                    <li><strong>Virginica:</strong> Large petals, similar to Versicolor</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
